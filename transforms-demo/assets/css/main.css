@@ -1,70 +1,45 @@
-/* 
-==============================================
-CONTENT:	Project Name Here
-AUTHOR:		Your Name Here
-==============================================
-
-TABLE OF CONTENTS:
-
-1. Main Layout
-2. Content
-
-==============================================
-*/
-/* 1. Main Layout ================================= */
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: #555; }
 
-body {
-  background: #ccc; }
+.gallery {
+  text-align: center; }
 
-.content {
+.gallery-item {
   position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
   background: white;
-  padding: 50px 30px 50px;
-  font-family: sans-serif;
-  width: 90%;
-  max-width: 500px;
-  margin: 140px auto; }
+  overflow: hidden; }
 
-/* 2. Content ================================= */
-.top-angle {
+.gallery-item img {
   position: absolute;
-  left: -1%;
-  top: -15px;
-  width: 102%;
-  height: 30px;
-  background: #ccc;
-  transform: rotate(-2.2deg); }
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 1s; }
 
-.bottom-angle {
+.gallery-item p {
   position: absolute;
-  left: -1%;
-  bottom: -15px;
-  width: 102%;
-  height: 30px;
-  background: #ccc;
-  transform: rotate(1.5deg); }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-.logo {
-  position: absolute;
-  top: -10px;
-  width: 60px; }
+#item-1:hover img {
+  transform: translateX(-100%); }
 
-h1 {
-  font-weight: 700;
-  font-size: 22pt;
-  margin: 15px 0; }
+#item-2:hover img {
+  transform: scale(1.5) translateX(-100%); }
 
-p {
-  color: #777;
-  line-height: 140%; }
+#item-3:hover img {
+  transform: rotate(1turn); }
 
-code {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 0.8em;
-  opacity: 0.1; }
+#item-4:hover img {
+  transform: translateY(-100%) skew(-10deg, -10deg); }
+
+.centered {
+  left: 50%;
+  transform: translateX(-50%); }
 
 /*# sourceMappingURL=main.css.map */
